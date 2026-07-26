@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+
+  --primary: #00b140;
+  --primary-dark: #008d34;
+
+  --secondary: #0f172a;
+
+  --gray: #64748b;
+
+  --section: #f8fafc;
+
+  --container: 1280px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
