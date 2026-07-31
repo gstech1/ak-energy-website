@@ -1,5 +1,6 @@
 import ProductHero from "@/components/product/ProductHero";
-import ProductOverview from "@/components/product/ProductOverview";
+import ProductMenu from "@/components/product/ProductMenu";
+import InverterProducts from "@/components/product/InverterProducts";
 import ProductApplications from "@/components/product/ProductApplications";
 
 export const metadata = {
@@ -10,25 +11,17 @@ export const metadata = {
 
 export default function InverterPage() {
   return (
-    <main>
-      <ProductHero
-        title="Inverter"
-        subtitle="Professional Hybrid, On-Grid and Off-Grid inverter solutions for residential, commercial and industrial applications."
-      />
+    <>
+      {/* Sticky Area */}
+      <div className="sticky top-0 z-5 bg-white">
+        <ProductHero
+          backgroundImage="/images/products/hero/inverter-bg.png"
+        />
 
-      <ProductOverview
-        image="/images/products/inverter.jpg"
-        title="Professional Inverter Solutions"
-        description="Arkar Min Thuka Electro Trading Co., Ltd. supplies high-performance inverter solutions engineered for reliable operation, excellent efficiency and long service life. Our products are suitable for residential, commercial and industrial solar energy systems."
-        features={[
-          "Hybrid Inverter",
-          "On-Grid Inverter",
-          "Off-Grid Inverter",
-          "High Conversion Efficiency",
-          "Smart Monitoring",
-          "Reliable Protection System",
-        ]}
-      />
+        <ProductMenu items={[]} />
+      </div>
+
+      <InverterProducts />
 
       <ProductApplications
         applications={[
@@ -38,6 +31,6 @@ export default function InverterPage() {
           "Warehouses",
         ]}
       />
-    </main>
+    </>
   );
 }

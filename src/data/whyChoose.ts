@@ -3,6 +3,7 @@ export interface WhyChooseItem {
   title: string;
   description: string;
   image: string;
+  link: string;
 }
 
 export const whyChooseItems: WhyChooseItem[] = [
@@ -12,6 +13,7 @@ export const whyChooseItems: WhyChooseItem[] = [
     description:
       "Official Suntree distributor providing genuine electrical protection products.",
     image: "/images/why-choose/1.png",
+    link: "/about/authorized-distributor",
   },
 
   {
@@ -20,6 +22,7 @@ export const whyChooseItems: WhyChooseItem[] = [
     description:
       "Learn about warranty coverage, terms, conditions and claim procedures for all genuine Suntree products.",
     image: "/images/why-choose/2.png",
+    link: "/warranty",
   },
 
   {
@@ -28,6 +31,7 @@ export const whyChooseItems: WhyChooseItem[] = [
     description:
       "Experienced engineers and technical specialists ready to support your projects.",
     image: "/images/why-choose/3.png",
+    link: "/#contact",
   },
 
   {
@@ -36,5 +40,6 @@ export const whyChooseItems: WhyChooseItem[] = [
     description:
       "Fast after-sales service and nationwide customer support.",
     image: "/images/why-choose/4.png",
+    link: "/#contact",
   },
 ];

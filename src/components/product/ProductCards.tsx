@@ -20,7 +20,7 @@ export default function ProductCards({
   onSelect,
 }: ProductCardsProps) {
   return (
-    <section className="pb-16">
+    <section id="product-cards" className="pb-16">
       <div className="container mx-auto px-6">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (

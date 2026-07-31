@@ -17,7 +17,7 @@ export default function TopBar() {
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2">
             <Phone size={14} />
-            <span>+95 9 XXX XXX XXX</span>
+            <span>+95 9 777 499 600</span>
           </div>
 
           <div className="flex items-center gap-2">

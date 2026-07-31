@@ -16,17 +16,17 @@ export default function VisionMissionPage() {
       />
 
       <ProductOverview
-        image="/images/about/vision-mission.jpg"
+        image="/images/about/vision-mission.png"
         title="Our Vision & Mission"
-        description="Our vision is to become one of Myanmar's leading providers of electrical products and renewable energy solutions. Our mission is to deliver reliable products, excellent engineering services and long-term customer satisfaction while contributing to sustainable development."
+        description="Our vision is to become Myanmar's most trusted provider of electrical products, renewable energy solutions, and engineering services. Our mission is to deliver innovative technologies, genuine products, and exceptional customer service while creating sustainable value for our customers, partners, and communities through quality, integrity, and continuous innovation."
         features={[
-          "Customer First",
-          "Innovation",
-          "Integrity",
-          "Quality Assurance",
-          "Professional Service",
-          "Sustainable Growth",
-        ]}
+  "Customer-Centric Excellence",
+  "Innovation & Continuous Improvement",
+  "Integrity & Professionalism",on
+  "Commitment to Quality",
+  "Technical Expertise & Reliable Service",
+  "Sustainable Growth & Long-Term Partnerships",
+]}
       />
     </main>
   );

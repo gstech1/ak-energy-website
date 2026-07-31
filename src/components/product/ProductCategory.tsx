@@ -8,7 +8,7 @@ export default function ProductCategory({
   description,
 }: ProductCategoryProps) {
   return (
-    <section className="py-16">
+    <section id="product-category" className="py-16">
       <div className="container mx-auto max-w-5xl px-6 text-center">
         <h2 className="mb-6 text-4xl font-bold text-gray-900">
           {heading}

@@ -20,12 +20,11 @@ export default function WhyChooseUs() {
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           {whyChooseItems.map((item) => (
             <Link
-            
               key={item.id}
-              href="#"
+              href={item.link}
               className="group relative overflow-hidden rounded-3xl border border-white/40 bg-white/70 backdrop-blur-xl shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(16,185,129,0.18)]"
             >
-<div className="absolute bottom-0 left-0 h-1 w-0 rounded-r-full bg-gradient-to-r from-emerald-500 to-green-300 transition-all duration-500 group-hover:w-full"></div>
+              <div className="absolute bottom-0 left-0 h-1 w-0 rounded-r-full bg-gradient-to-r from-emerald-500 to-green-300 transition-all duration-500 group-hover:w-full"></div>
 
               {/* Image */}
               <div className="flex h-72 items-center justify-center bg-white p-8">

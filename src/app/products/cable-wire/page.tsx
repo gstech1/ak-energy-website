@@ -1,5 +1,6 @@
 import ProductHero from "@/components/product/ProductHero";
-import ProductOverview from "@/components/product/ProductOverview";
+import ProductMenu from "@/components/product/ProductMenu";
+import CableProducts from "@/components/product/CableProducts";
 import ProductApplications from "@/components/product/ProductApplications";
 
 export const metadata = {
@@ -10,34 +11,28 @@ export const metadata = {
 
 export default function CableWirePage() {
   return (
-    <main>
-      <ProductHero
-        title="Cable & Wire"
-        subtitle="High-quality electrical cables and wiring solutions designed for safe, reliable and efficient power distribution."
-      />
+    <>
+      {/* Sticky Area */}
+      <div className="sticky top-0 z-5 bg-white">
+        <ProductHero
+          backgroundImage="/images/products/hero/cable-bg.png"
+        />
 
-      <ProductOverview
-        image="/images/products/cable-wire.png"
-        title="Premium Cable & Wire Solutions"
-        description="Arkar Min Thuka Electro Trading Co., Ltd. supplies premium-quality electrical cables and wires for residential, commercial, industrial and renewable energy applications. Our products are manufactured to meet international quality standards for safety, durability and long-term performance."
-        features={[
-          "Power Cable",
-          "Control Cable",
-          "Solar DC Cable",
-          "Flexible Cable",
-          "Flame Retardant Insulation",
-          "Long Service Life",
-        ]}
-      />
+        <ProductMenu items={[]} />
+      </div>
 
-      <ProductApplications
-        applications={[
-          "Residential Buildings",
-          "Commercial Projects",
-          "Industrial Plants",
-          "Solar Power Systems",
-        ]}
-      />
-    </main>
+     <CableProducts />
+
+<ProductApplications
+  applications={[
+    "Residential Buildings",
+    "Commercial Projects",
+    "Industrial Plants",
+    "Solar Power Systems",
+  ]}
+/>
+
+     
+    </>
   );
 }

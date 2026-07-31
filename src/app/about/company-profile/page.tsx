@@ -16,17 +16,17 @@ export default function CompanyProfilePage() {
       />
 
       <ProductOverview
-        image="/images/about/company-profile.jpg"
+        image="/images/about/company-profile.png"
         title="Who We Are"
-        description="Arkar Min Thuka Electro Trading Co., Ltd. is one of Myanmar's trusted suppliers of electrical products, renewable energy systems and engineering solutions. We are committed to delivering genuine products, professional technical support and long-term value to residential, commercial and industrial customers."
+       description="Arkar Min Thuka Electro Trading Co., Ltd. is a leading provider of electrical products, renewable energy solutions, and engineering services in Myanmar. As the official authorized distributor of SUNTREE, we are dedicated to delivering genuine products, innovative technologies, and professional technical support. Our commitment is to provide safe, reliable, and sustainable energy solutions that create long-term value for residential, commercial, and industrial customers."
         features={[
-          "Electrical Products",
-          "Solar Energy Systems",
-          "Battery Backup Solutions",
-          "Engineering Services",
-          "Professional Technical Support",
-          "Nationwide Distribution",
-        ]}
+  "Official SUNTREE Authorized Distributor",
+  "Electrical Protection Solutions",
+  "Solar Energy & PV Systems",
+  "Battery Energy Storage Solutions",
+  "Professional Engineering Services",
+  "Nationwide Sales & Technical Support",
+]}
       />
     </main>
   );

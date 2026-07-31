@@ -43,15 +43,34 @@ export default function Header() {
 
         {/* Center */}
         <nav className="hidden flex-1 items-center justify-center gap-12 lg:flex">
-          {menus.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-[16px] font-semibold text-slate-700 transition hover:text-green-700"
-            >
-              {item.name}
-            </Link>
-          ))}
+          {menus.map((item) => {
+  if (item.name === "Home") {
+    return (
+      <button
+        key={item.name}
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}
+        className="text-[16px] font-semibold text-slate-700 transition hover:text-green-700"
+      >
+        Home
+      </button>
+    );
+  }
+
+  return (
+    <Link
+      key={item.name}
+      href={item.href}
+      className="text-[16px] font-semibold text-slate-700 transition hover:text-green-700"
+    >
+      {item.name}
+    </Link>
+  );
+})}
         </nav>
 
         {/* Right */}

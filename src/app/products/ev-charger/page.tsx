@@ -1,43 +1,90 @@
+"use client";
+
+import { useEffect, useMemo, useRef, useState } from "react";
+
 import ProductHero from "@/components/product/ProductHero";
-import ProductOverview from "@/components/product/ProductOverview";
+import ProductCategory from "@/components/product/ProductCategory";
+import ProductCards from "@/components/product/ProductCards";
+import ProductDetail from "@/components/product/ProductDetail";
 import ProductApplications from "@/components/product/ProductApplications";
 
-export const metadata = {
-  title: "EV Charger | Arkar Min Thuka Electro Trading Co., Ltd.",
-  description:
-    "Smart EV charging solutions for residential, commercial and public applications.",
-};
+import { evCharger } from "@/data/product/ev-charger";
 
 export default function EVChargerPage() {
+  const detailRef = useRef<HTMLDivElement>(null);
+
+  const [selectedProduct, setSelectedProduct] = useState(
+    evCharger.products[0].id
+  );
+
+  useEffect(() => {
+    setSelectedProduct(evCharger.products[0].id);
+  }, []);
+
+  const product = useMemo(() => {
+    return (
+      evCharger.products.find(
+        (item) => item.id === selectedProduct
+      ) ?? evCharger.products[0]
+    );
+  }, [selectedProduct]);
+
+  const handleSelectProduct = (id: string) => {
+    setSelectedProduct(id);
+
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        if (!detailRef.current) return;
+
+        const y =
+          detailRef.current.getBoundingClientRect().top +
+          window.scrollY -
+          290;
+
+        window.scrollTo({
+          top: y,
+          behavior: "smooth",
+        });
+      }, 50);
+    });
+  };
+
   return (
-    <main>
-      <ProductHero
-        title="EV Charger"
-        subtitle="Smart, safe and efficient electric vehicle charging solutions for homes, businesses and public charging stations."
+    <>
+      <div className="sticky top-0 z-20">
+  <ProductHero
+    backgroundImage="/images/products/hero/ev-charger-bg.png"
+  />
+</div>
+
+      <ProductCategory
+        heading={evCharger.heading}
+        description={evCharger.description}
       />
 
-      <ProductOverview
-        image="/images/products/ev-charger.png"
-        title="Smart EV Charging Solutions"
-        description="Arkar Min Thuka Electro Trading Co., Ltd. supplies reliable AC and DC EV charging solutions designed for residential, commercial and public infrastructure. Our products provide safe, intelligent and high-performance charging for modern electric vehicles."
-        features={[
-          "AC EV Charger",
-          "DC Fast Charger",
-          "Smart Charging Control",
-          "Multiple Protection Functions",
-          "Energy Efficient Design",
-          "Easy Installation & Maintenance",
-        ]}
+      <ProductCards
+        products={evCharger.products}
+        selected={selectedProduct}
+        onSelect={handleSelectProduct}
+      />
+
+      <ProductDetail
+        ref={detailRef}
+        product={product}
       />
 
       <ProductApplications
         applications={[
-          "Residential Homes",
+          "Residential Home Charging",
           "Office Buildings",
-          "Commercial Parking",
+          "Commercial Parking Areas",
+          "Shopping Malls",
+          "Hotels & Resorts",
           "Public Charging Stations",
+          "Fleet Charging",
+          "Industrial Facilities",
         ]}
       />
-    </main>
+    </>
   );
 }

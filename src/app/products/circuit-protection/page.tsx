@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import ProductMenu from "@/components/product/ProductMenu";
 import ProductCategory from "@/components/product/ProductCategory";
@@ -12,26 +11,23 @@ import { productMenu } from "@/data/product/product-menu";
 import { productCategories } from "@/data/product";
 
 export default function CircuitProtectionPage() {
-  // Selected Menu
   const [selectedCategory, setSelectedCategory] = useState(productMenu[0]);
 
-  // Current Category
+  const detailRef = useRef<HTMLDivElement>(null);
+
   const category =
     productCategories[
       selectedCategory as keyof typeof productCategories
     ];
 
-  // Selected Product
   const [selectedProduct, setSelectedProduct] = useState(
     category.products[0].id
   );
 
-  // Reset first product when category changes
   useEffect(() => {
     setSelectedProduct(category.products[0].id);
   }, [category]);
 
-  // Current Product
   const product = useMemo(() => {
     return (
       category.products.find(
@@ -40,33 +36,63 @@ export default function CircuitProtectionPage() {
     );
   }, [category, selectedProduct]);
 
+  const handleSelectProduct = (id: string) => {
+    setSelectedProduct(id);
+
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        if (!detailRef.current) return;
+
+        const y =
+          detailRef.current.getBoundingClientRect().top +
+          window.scrollY -
+          370;
+
+        window.scrollTo({
+          top: y,
+          behavior: "smooth",
+        });
+      }, 50);
+    });
+  };
+
   return (
-  <>
-    <ProductHero
-      title={category.heading}
-      subtitle={category.description[0]}
-    />
+    <>
+      {/* Sticky Area */}
+      <div className="sticky top-0 z-5 bg-white">
+        <ProductHero
+          backgroundImage="/images/products/hero/circuit-protection-bg2.png"
+        />
 
-    <ProductMenu
-      items={productMenu}
-      selected={selectedCategory}
-      onSelect={setSelectedCategory}
-    />
+        <ProductMenu
+          items={productMenu}
+          selected={selectedCategory}
+          onSelect={(item) => {
+            setSelectedCategory(item);
 
-    <ProductCategory
-      heading={category.heading}
-      description={category.description}
-    />
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+        />
+      </div>
 
-    <ProductCards
-      products={category.products}
-      selected={selectedProduct}
-      onSelect={setSelectedProduct}
-    />
+      <ProductCategory
+        heading={category.heading}
+        description={category.description}
+      />
 
-    <ProductDetail
-      product={product}
-    />
-  </>
-);
+      <ProductCards
+        products={category.products}
+        selected={selectedProduct}
+        onSelect={handleSelectProduct}
+      />
+
+      <ProductDetail
+        ref={detailRef}
+        product={product}
+      />
+    </>
+  );
 }
