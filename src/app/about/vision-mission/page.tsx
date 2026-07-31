@@ -22,7 +22,7 @@ export default function VisionMissionPage() {
         features={[
   "Customer-Centric Excellence",
   "Innovation & Continuous Improvement",
-  "Integrity & Professionalism",on
+  "Integrity & Professionalism",
   "Commitment to Quality",
   "Technical Expertise & Reliable Service",
   "Sustainable Growth & Long-Term Partnerships",
