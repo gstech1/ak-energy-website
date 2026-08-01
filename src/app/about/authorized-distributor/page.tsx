@@ -4,7 +4,7 @@ import AboutHero from "@/components/about/AboutHero";
 import ProductOverview from "@/components/product/ProductOverview";
 
 export const metadata = {
-  title: "Authorized Distributor | Arkar Min Thuka Electro Trading Co., Ltd.",
+  title: "Authorized Distributor | Arkar Min Thukha Electro Trading Co., Ltd.",
 };
 
 const distributorImages = [
@@ -26,7 +26,7 @@ export default function AuthorizedDistributorPage() {
       <ProductOverview
         image="/images/about/authorized.png"
         title="Official Authorized Distributor"
-        description="Arkar Min Thuka Electro Trading Co., Ltd. is the official authorized distributor of SUNTREE products in Myanmar. We are committed to delivering genuine products, dependable technical expertise, comprehensive warranty support, and professional after-sales services to customers across the country. Our mission is to provide reliable electrical and renewable energy solutions while building long-term partnerships based on trust, quality, and customer satisfaction."
+        description="Arkar Min Thukha Electro Trading Co., Ltd. is the official authorized distributor of SUNTREE products in Myanmar. We are committed to delivering genuine products, dependable technical expertise, comprehensive warranty support, and professional after-sales services to customers across the country. Our mission is to provide reliable electrical and renewable energy solutions while building long-term partnerships based on trust, quality, and customer satisfaction."
         features={[
   "Official Authorized Distributor of SUNTREE",
   "100% Genuine & Certified Products",
@@ -46,7 +46,7 @@ export default function AuthorizedDistributorPage() {
             </h2>
 
             <p className="mt-3 text-lg text-slate-600">
-              Official documents recognizing Arkar Min Thuka Electro Trading Co., Ltd.
+              Official documents recognizing Arkar Min Thukha Electro Trading Co., Ltd.
               as an authorized distributor.
             </p>
           </div>

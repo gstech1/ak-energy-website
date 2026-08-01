@@ -22,7 +22,7 @@ export const whyChooseItems: WhyChooseItem[] = [
     description:
       "Learn about warranty coverage, terms, conditions and claim procedures for all genuine Suntree products.",
     image: "/images/why-choose/2.png",
-    link: "/warranty",
+    link: "/warranty-policy",
   },
 
   {
