@@ -19,15 +19,15 @@ const certificates = [
     title: "Authorized Distributor Certificate",
   },
   {
-    image: "/images/about/certi/ISO-9001.png",
+    image: "/images/about/certi/c2.png",
     title: "ISO-9001",
   },
   {
-    image: "/images/about/certi/ISO14001-2004.png",
+    image: "/images/about/certi/c3.png",
     title: "ISO Certification",
   },
   {
-    image: "/images/about/certi/ISO-18000.png",
+    image: "/images/about/certi/c4.png",
     title: "Quality Certificate",
   },
   
