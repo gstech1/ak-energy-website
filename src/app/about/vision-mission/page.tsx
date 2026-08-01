@@ -2,9 +2,9 @@ import AboutHero from "@/components/about/AboutHero";
 import ProductOverview from "@/components/product/ProductOverview";
 
 export const metadata = {
-  title: "Vision & Mission | Arkar Min Thuka Electro Trading Co., Ltd.",
+  title: "Vision & Mission | Arkar Min Thukha Electro Trading Co., Ltd.",
   description:
-    "Vision, mission and core values of Arkar Min Thuka Electro Trading Co., Ltd.",
+    "Vision, mission and core values of Arkar Min Thukha Electro Trading Co., Ltd.",
 };
 
 export default function VisionMissionPage() {

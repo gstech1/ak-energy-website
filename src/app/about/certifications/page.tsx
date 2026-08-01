@@ -4,9 +4,9 @@ import AboutHero from "@/components/about/AboutHero";
 import ProductOverview from "@/components/product/ProductOverview";
 
 export const metadata = {
-  title: "Certifications | Arkar Min Thuka Electro Trading Co., Ltd.",
+  title: "Certifications | Arkar Min Thukha Electro Trading Co., Ltd.",
   description:
-    "Official certifications, licenses and quality commitments of Arkar Min Thuka Electro Trading Co., Ltd.",
+    "Official certifications, licenses and quality commitments of Arkar Min Thukha Electro Trading Co., Ltd.",
 };
 
 const certificates = [
@@ -19,15 +19,15 @@ const certificates = [
     title: "Authorized Distributor Certificate",
   },
   {
-    image: "/images/about/certi/ISO-9001.JPG",
+    image: "/images/about/certi/ISO-9001.png",
     title: "ISO-9001",
   },
   {
-    image: "/images/about/certi/ISO14001-2004.JPG",
+    image: "/images/about/certi/ISO14001-2004.png",
     title: "ISO Certification",
   },
   {
-    image: "/images/about/certi/ISO-18000.JPG",
+    image: "/images/about/certi/ISO-18000.png",
     title: "Quality Certificate",
   },
   

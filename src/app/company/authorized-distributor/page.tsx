@@ -6,7 +6,7 @@ export default function AuthorizedDistributorPage() {
       </h1>
 
       <p className="mb-8 text-lg leading-8 text-slate-600">
-        AK Energy is the official authorized distributor of Suntree electrical
+        Arkar Min Thukha Electro Trading is the official authorized distributor of Suntree electrical
         protection products in Myanmar. We supply genuine products with
         manufacturer-backed quality assurance and professional customer support.
       </p>
