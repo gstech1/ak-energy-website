@@ -21,7 +21,7 @@ export default function FeaturedProducts() {
 
           <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
             From solar power generation to battery backup systems and premium
-            circuit protection, AK Energy delivers complete energy solutions
+            circuit protection, MTK Energy delivers complete energy solutions
             across Myanmar.
           </p>
         </div>
