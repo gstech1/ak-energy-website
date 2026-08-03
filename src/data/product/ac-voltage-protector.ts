@@ -23,7 +23,7 @@ export const acVoltageProtector = {
       
 
     images: [
-    "/images/products/ac-voltage-protector/01.png",
+    "/images/products/ac-voltage-protector/06.png",
     "/images/products/ac-voltage-protector/02.png",
     "/images/products/ac-voltage-protector/03.png",
     "/images/products/ac-voltage-protector/04.png",

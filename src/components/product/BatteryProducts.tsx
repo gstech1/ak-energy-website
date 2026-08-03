@@ -67,7 +67,7 @@ export default function InverterProducts() {
 
           <div className="rounded-2xl border bg-white p-4 shadow-sm">
             <Image
-              src="/images/products/battery/vami sp"
+              src="/images/products/battery/vami sp.png"
               alt="Specification 3"
               width={800}
               height={800}
@@ -99,7 +99,98 @@ export default function InverterProducts() {
           </div>
         </div>
 
-        
+        {/* Product 5 */}
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="rounded-2xl border bg-white p-4 shadow-sm">
+            <Image
+              src="/images/products/battery/bosg.png"
+              alt="Inverter 4"
+              width={800}
+              height={800}
+              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
+            />
+          </div>
+
+          <div className="rounded-2xl border bg-white p-4 shadow-sm">
+            <Image
+              src="/images/products/battery/bosgsp.png"
+              alt="Specification 4"
+              width={800}
+              height={800}
+              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
+            />
+          </div>
+        </div>
+
+{/* Product 6 */}
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="rounded-2xl border bg-white p-4 shadow-sm">
+            <Image
+              src="/images/products/battery/deyebos-w.png"
+              alt="Inverter 4"
+              width={800}
+              height={800}
+              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
+            />
+          </div>
+
+          <div className="rounded-2xl border bg-white p-4 shadow-sm">
+            <Image
+              src="/images/products/battery/deyebos-wsp.png"
+              alt="Specification 4"
+              width={800}
+              height={800}
+              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
+            />
+          </div>
+        </div>
+
+        {/* Product 7 */}
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="rounded-2xl border bg-white p-4 shadow-sm">
+            <Image
+              src="/images/products/battery/deyebos-gpro.png"
+              alt="Inverter 4"
+              width={800}
+              height={800}
+              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
+            />
+          </div>
+
+          <div className="rounded-2xl border bg-white p-4 shadow-sm">
+            <Image
+              src="/images/products/battery/deyebos-gprosp.png"
+              alt="Specification 4"
+              width={800}
+              height={800}
+              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
+            />
+          </div>
+        </div>
+
+{/* Product 8 */}
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="rounded-2xl border bg-white p-4 shadow-sm">
+            <Image
+              src="/images/products/battery/luna2000.png"
+              alt="Inverter 4"
+              width={800}
+              height={800}
+              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
+            />
+          </div>
+
+          <div className="rounded-2xl border bg-white p-4 shadow-sm">
+            <Image
+              src="/images/products/battery/luna200sp.png"
+              alt="Specification 4"
+              width={800}
+              height={800}
+              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
+            />
+          </div>
+        </div>
+
 
       </div>
     </section>
