@@ -3,7 +3,7 @@ import Image from "next/image";
 import { products } from "@/data/products";
 
 export const metadata = {
-  title: "Products | Arkar Min Thuka Electro Trading Co., Ltd.",
+  title: "Products | Arkar Min Thukha Electro Trading Co., Ltd.",
   description:
     "Explore our complete range of energy and electrical solutions.",
 };

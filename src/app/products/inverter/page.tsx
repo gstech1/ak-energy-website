@@ -4,7 +4,7 @@ import InverterProducts from "@/components/product/InverterProducts";
 import ProductApplications from "@/components/product/ProductApplications";
 
 export const metadata = {
-  title: "Inverter | Arkar Min Thuka Electro Trading Co., Ltd.",
+  title: "Inverter | Arkar Min Thukha Electro Trading Co., Ltd.",
   description:
     "Professional inverter solutions for residential, commercial and industrial applications.",
 };

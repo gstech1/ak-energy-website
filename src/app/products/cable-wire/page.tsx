@@ -4,7 +4,7 @@ import CableProducts from "@/components/product/CableProducts";
 import ProductApplications from "@/components/product/ProductApplications";
 
 export const metadata = {
-  title: "Cable & Wire | Arkar Min Thuka Electro Trading Co., Ltd.",
+  title: "Cable & Wire | Arkar Min Thukha Electro Trading Co., Ltd.",
   description:
     "High-quality electrical cables and wires for residential, commercial and industrial applications.",
 };

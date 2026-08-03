@@ -11,7 +11,7 @@ export default function InverterProducts() {
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border bg-white p-4 shadow-sm">
             <Image
-              src="/images/products/inverter/feli.png"
+              src="/images/products/battery/s280.png"
               alt="Inverter 1"
               width={800}
               height={800}
@@ -21,7 +21,7 @@ export default function InverterProducts() {
 
           <div className="rounded-2xl border bg-white p-4 shadow-sm">
             <Image
-              src="/images/products/inverter/feli sp.png"
+              src="/images/products/battery/s280 sp.png"
               alt="Specification 1"
               width={800}
               height={800}
@@ -34,7 +34,7 @@ export default function InverterProducts() {
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border bg-white p-4 shadow-sm">
             <Image
-              src="/images/products/inverter/gospower1.png"
+              src="/images/products/battery/s314.png"
               alt="Inverter 2"
               width={800}
               height={800}
@@ -44,7 +44,7 @@ export default function InverterProducts() {
 
           <div className="rounded-2xl border bg-white p-4 shadow-sm">
             <Image
-              src="/images/products/inverter/gospower2.png"
+              src="/images/products/battery/s314 sp.png"
               alt="Specification 2"
               width={800}
               height={800}
@@ -57,7 +57,7 @@ export default function InverterProducts() {
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border bg-white p-4 shadow-sm">
             <Image
-              src="/images/products/inverter/growatt 1.png"
+              src="/images/products/battery/vami.png"
               alt="Inverter 3"
               width={800}
               height={800}
@@ -67,7 +67,7 @@ export default function InverterProducts() {
 
           <div className="rounded-2xl border bg-white p-4 shadow-sm">
             <Image
-              src="/images/products/inverter/growatt1sp.png"
+              src="/images/products/battery/vami sp"
               alt="Specification 3"
               width={800}
               height={800}
@@ -80,7 +80,7 @@ export default function InverterProducts() {
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border bg-white p-4 shadow-sm">
             <Image
-              src="/images/products/inverter/hsi.png"
+              src="/images/products/battery/po4.png"
               alt="Inverter 4"
               width={800}
               height={800}
@@ -90,7 +90,7 @@ export default function InverterProducts() {
 
           <div className="rounded-2xl border bg-white p-4 shadow-sm">
             <Image
-              src="/images/products/inverter/hsi sp.png"
+              src="/images/products/battery/rine.png"
               alt="Specification 4"
               width={800}
               height={800}
@@ -99,143 +99,7 @@ export default function InverterProducts() {
           </div>
         </div>
 
-        {/* Product 5 */}
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/inverter/lux.png"
-              alt="Inverter 5"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/inverter/lux sp.png"
-              alt="Specification 5"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-        </div>
-
-        {/* Product 6 */}
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/inverter/mk2.png"
-              alt="Inverter 5"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/inverter/mk2 sp.png"
-              alt="Specification 5"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-        </div>
-
-    {/* Product 7 */}
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/inverter/solis.png"
-              alt="Inverter 5"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/inverter/solis sp.png"
-              alt="Specification 5"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-        </div>
-
-        {/* Product 8 */}
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/inverter/solis2.png"
-              alt="Inverter 5"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/inverter/solis2 sp.png"
-              alt="Specification 5"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-        </div>
-
-    {/* Product 9 */}
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/inverter/srne1.png"
-              alt="Inverter 5"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/inverter/srne1 sp.png"
-              alt="Specification 5"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-        </div>
-
-        {/* Product 10 */}
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/inverter/mk.png"
-              alt="Inverter 5"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/inverter/mk sp.png"
-              alt="Specification 5"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-        </div>
+        
 
       </div>
     </section>

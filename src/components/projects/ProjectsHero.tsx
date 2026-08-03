@@ -74,7 +74,7 @@ export default function ProjectsHero() {
             <div className="rounded-2xl border border-white/20 bg-slate-900/45 p-6 backdrop-blur-xl">
               <BriefcaseBusiness className="h-10 w-10 text-green-400" />
               <h4 className="mt-4 text-4xl font-extrabold text-white">
-                150+
+                500+
               </h4>
               <p className="mt-2 text-base text-slate-200">
                 Projects Completed
@@ -94,7 +94,7 @@ export default function ProjectsHero() {
             <div className="rounded-2xl border border-white/20 bg-slate-900/45 p-6 backdrop-blur-xl">
               <Zap className="h-10 w-10 text-green-400" />
               <h4 className="mt-4 text-4xl font-extrabold text-white">
-                5000kW+
+                15000kW+
               </h4>
               <p className="mt-2 text-base text-slate-200">
                 Installed Capacity
