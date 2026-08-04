@@ -26,6 +26,21 @@ export const dcSpd = {
     "/images/products/dc-circuit-breaker/dcspt3p/technical-reference.png",
   ],
 },
+
+{
+  id: "dcspt2p",
+  title: "DC Surge Protectors 2P",
+  image: "/images/products/dc-circuit-breaker/dcspt2p/1.png",
+
+  images: [
+    "/images/products/dc-circuit-breaker/dcspt2p/2.png",
+    "/images/products/dc-circuit-breaker/dcspt2p/internal-structure.png",
+    "/images/products/dc-circuit-breaker/dcspt2p/wiring-diagram.png",
+    "/images/products/dc-circuit-breaker/dcspt2p/flame-test.png",
+    "/images/products/dc-circuit-breaker/dcspt2p/technical-reference.png",
+  ],
+}, 
+
 {
   id: "dcfuse",
   title: "DC Fuse SRD-30",

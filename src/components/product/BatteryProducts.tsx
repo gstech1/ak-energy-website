@@ -53,28 +53,7 @@ export default function InverterProducts() {
           </div>
         </div>
 
-        {/* Product 3 */}
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/battery/vami.png"
-              alt="Inverter 3"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-
-          <div className="rounded-2xl border bg-white p-4 shadow-sm">
-            <Image
-              src="/images/products/battery/vami sp.png"
-              alt="Specification 3"
-              width={800}
-              height={800}
-              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
-            />
-          </div>
-        </div>
+        
 
         {/* Product 4 */}
         <div className="grid gap-6 lg:grid-cols-2">

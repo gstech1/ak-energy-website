@@ -237,6 +237,29 @@ export default function InverterProducts() {
           </div>
         </div>
 
+        {/* Product 11 */}
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="rounded-2xl border bg-white p-4 shadow-sm">
+            <Image
+              src="/images/products/inverter/vami.png"
+              alt="Inverter 11"
+              width={800}
+              height={800}
+              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
+            />
+          </div>
+
+          <div className="rounded-2xl border bg-white p-4 shadow-sm">
+            <Image
+              src="/images/products/inverter/vami sp.png"
+              alt="Specification 11"
+              width={800}
+              height={800}
+              className="h-auto w-full cursor-pointer object-contain transition hover:scale-[1.02]"
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   );
