@@ -503,10 +503,7 @@ export default function WarrantyPolicyPage() {
 
               <div className="rounded-3xl border border-slate-200 bg-slate-50 p-10 shadow-lg">
 
-                <span className="rounded-full bg-emerald-100 px-5 py-2 text-sm font-semibold uppercase tracking-[0.15em] text-emerald-700">
-                  Solar Warranty
-                </span>
-
+                
                 <h3 className="mt-5 text-4xl font-bold text-slate-900">
                   Warranty Coverage
                 </h3>
@@ -530,6 +527,22 @@ export default function WarrantyPolicyPage() {
                   <li>
                     ✔ Battery Warranty includes Battery Pack, BMS,
                     Breaker and Display.
+                  </li>
+                  
+                  <li>
+                  ✔ During the warranty period, if an Inverter or Battery is confirmed to
+                  have a manufacturing defect and complies with the warranty policy,
+                  Arkar Min Thukha Electro Trading Co., Ltd. will provide a replacement
+                  unit while the original product is being inspected or serviced,
+                  subject to product availability and warranty approval.
+                  </li>
+
+                  <li>
+                  ✔ Lithium Battery capacity naturally decreases over time.
+                  A reduction of approximately 5%–7% State of Health (SOH) per year
+                  is considered normal. The battery warranty remains valid until the
+                  battery State of Health (SOH) falls below 60% within the applicable
+                  warranty period, subject to the manufacturer's warranty policy.
                   </li>
 
                   <li>
@@ -575,6 +588,26 @@ export default function WarrantyPolicyPage() {
                     တို့ ပါဝင်ပါသည်။
                   </li>
 
+                  <li>
+                  ✔ Warranty ကာလအတွင်း Inverter သို့မဟုတ် Battery တွင်
+                  ထုတ်လုပ်မှုဆိုင်ရာချို့ယွင်းချက် (Manufacturing Defect) ဖြစ်ပေါ်ပြီး
+                  Warranty Policy နှင့်ကိုက်ညီပါက စစ်ဆေးပြုပြင်နေစဉ်အတွင်း
+                  ကုန်ပစ္စည်းလက်ကျန်ရှိမှုနှင့် အာမခံအတည်ပြုချက်အပေါ်မူတည်၍
+                  အစားထိုးအသုံးပြုနိုင်သော Unit တစ်လုံးကို
+                  Arkar Min Thukha Electro Trading Co., Ltd. မှ
+                  ယာယီအစားထိုးတပ်ဆင်ပေးမည်ဖြစ်ပါသည်။
+                  </li>
+
+                  <li>
+                  ✔ Lithium Battery များ၏ State of Health (SOH) သည်
+                  အသုံးပြုမှုအလိုက် နှစ်စဉ်ပျမ်းမျှ 5% မှ 7% အထိ
+                  သဘာဝအတိုင်း ကျဆင်းနိုင်ပါသည်။
+                  Warranty ကာလအတွင်း Battery ၏ SOH သည်
+                  60% အောက်သို့ကျဆင်းသွားပါက
+                  Manufacturer Warranty Policy နှင့်ကိုက်ညီသည့်အခြေအနေတွင်
+                  Warranty အကျုံးဝင်မည်ဖြစ်ပါသည်။
+                  </li>
+                  
                   <li>
                     ✔ Warranty သည်
                     ထုတ်လုပ်မှုချို့ယွင်းချက်များအတွက်သာ
