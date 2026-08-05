@@ -383,7 +383,7 @@ export default function WarrantyPolicyPage() {
                   <div className="mb-5 text-5xl">⚡</div>
 
                   <h4 className="text-2xl font-bold">
-                    SPD & DC Isolator
+                    All ATS Model
                   </h4>
 
                   <p className="mt-5 leading-8 text-slate-600">
@@ -420,7 +420,7 @@ export default function WarrantyPolicyPage() {
                   <div className="mb-5 text-5xl">🚫</div>
 
                   <h4 className="text-2xl font-bold">
-                    DC Fuse
+                    SPD and DC Fuse
                   </h4>
 
                   <p className="mt-5 leading-8">
