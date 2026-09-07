@@ -1,23 +1,50 @@
 import Image from "next/image";
 import { Battery, MapPin, Sun, Zap } from "lucide-react";
-import { Project } from "@/data/projects";
 
 interface ProjectCardProps {
-  project: Project;
+  project: {
+    id: string | number;
+    category: string;
+    title: string;
+    location: string;
+    capacity: string;
+    panels: string;
+    inverter: string;
+    battery: string;
+    image: string;
+  };
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({
+  project,
+}: ProjectCardProps) {
+  const isBackendImage =
+    project.image.startsWith(
+      "http://localhost:5001/",
+    ) ||
+    project.image.startsWith(
+      "https://localhost:5001/",
+    );
+
   return (
     <div className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
 
       {/* Image */}
       <div className="relative h-72 overflow-hidden">
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          className="object-cover transition duration-700 group-hover:scale-110"
-        />
+        {isBackendImage ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+          />
+        ) : (
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover transition duration-700 group-hover:scale-110"
+          />
+        )}
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
@@ -81,7 +108,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <span className="text-slate-600">Battery</span>
             </div>
 
-            <span className="max-w-[180px] text-right font-semibold leading-6 text-slate-900 break-words">
+            <span className="max-w-[180px] break-words text-right font-semibold leading-6 text-slate-900">
               {project.battery}
             </span>
           </div>

@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 interface Product {
   id: string;
   title: string;
@@ -12,6 +10,25 @@ interface ProductCardsProps {
   products: Product[];
   selected: string;
   onSelect: (id: string) => void;
+}
+
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL ||
+  "http://localhost:5001";
+
+function getImageUrl(image: string) {
+  if (
+    image.startsWith("http://") ||
+    image.startsWith("https://")
+  ) {
+    return image;
+  }
+
+  if (image.startsWith("/website-cms/uploads/")) {
+    return `${API_URL}${image}`;
+  }
+
+  return image;
 }
 
 export default function ProductCards({
@@ -34,11 +51,10 @@ export default function ProductCards({
               }`}
             >
               <div className="relative h-64 w-full bg-white">
-                <Image
-                  src={product.image}
+                <img
+                  src={getImageUrl(product.image)}
                   alt={product.title}
-                  fill
-                  className="object-contain p-6"
+                  className="absolute inset-0 h-full w-full object-contain p-6"
                 />
               </div>
 

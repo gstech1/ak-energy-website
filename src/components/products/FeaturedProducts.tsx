@@ -2,15 +2,21 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { products } from "@/data/products";
+import WebsiteAds from "@/components/ads/WebsiteAds";
 
 export default function FeaturedProducts() {
   return (
-    <section id="products" className="bg-slate-200 py-24">
+    <section className="bg-slate-200 py-24">
       <div className="mx-auto max-w-7xl px-6">
 
-        {/* Heading */}
+        {/* Ads */}
+        <WebsiteAds />
 
-        <div className="mb-16 text-center">
+        {/* Heading */}
+        <div
+          id="products"
+          className="mb-16 scroll-mt-28 text-center"
+        >
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-green-600">
             OUR PRODUCTS
           </p>
@@ -27,9 +33,7 @@ export default function FeaturedProducts() {
         </div>
 
         {/* Cards */}
-
         <div className="grid grid-cols-2 gap-6 lg:grid-cols-3 2xl:grid-cols-6">
-
           {products.map((product) => (
             <Link
               key={product.id}
@@ -61,11 +65,9 @@ export default function FeaturedProducts() {
               </div>
             </Link>
           ))}
-
         </div>
 
-
-<div className="mt-16 flex justify-center">
+        <div className="mt-16 flex justify-center">
           <Link
             href="/products"
             className="inline-flex items-center rounded-full bg-blue-900 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-green-600 hover:shadow-xl"

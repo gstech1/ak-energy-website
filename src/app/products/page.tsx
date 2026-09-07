@@ -24,11 +24,11 @@ export default function ProductsPage() {
 
         <div className="absolute inset-0 bg-slate-900/45" />
 
-        <div className="relative mx-auto flex h-full max-w-7xl items-center justify-between px-6">
+        <div className="relative mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6">
           {/* Left */}
-          <div>
+          <div className="w-full">
             {/* Breadcrumb */}
-            <div className="mb-6 flex items-center gap-2 text-sm text-slate-300">
+            <div className="mb-3 flex items-center gap-2 text-sm text-slate-300 sm:mb-6">
               <Link href="/" className="hover:text-white">
                 Home
               </Link>
@@ -39,13 +39,13 @@ export default function ProductsPage() {
             </div>
 
             {/* Logos */}
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
               <Image
                 src="/images/logo/ak-logo2.png"
                 alt="AK Logo"
                 width={120}
                 height={60}
-                className="rounded-lg bg-white p-1"
+                className="w-[108px] rounded-lg bg-white p-1 sm:w-[120px]"
               />
 
               <Image
@@ -53,25 +53,23 @@ export default function ProductsPage() {
                 alt="Suntree Logo"
                 width={140}
                 height={60}
-                className="rounded-lg bg-white px-1 py-2"
+                className="w-[126px] rounded-lg bg-white px-1 py-2 sm:w-[140px]"
               />
             </div>
 
             {/* Company */}
-            <h1 className="mt-8 text-5xl font-black text-white">
+            <h1 className="mt-5 text-3xl font-black leading-tight text-white sm:mt-8 sm:text-5xl">
               ARKAR MIN THUKHA
             </h1>
 
-            <p className="mt-3 text-xl tracking-[0.3em] text-green-300">
+            <p className="mt-2 text-sm tracking-[0.2em] text-green-300 sm:mt-3 sm:text-xl sm:tracking-[0.3em]">
               ELECTRO TRADING CO., LTD.
             </p>
 
-            <p className="mt-4 text-lg text-slate-200">
+            <p className="mt-3 text-sm text-slate-200 sm:mt-4 sm:text-lg">
               Official Distributor of SUNTREE in Myanmar
             </p>
           </div>
-
-          
         </div>
       </section>
 
