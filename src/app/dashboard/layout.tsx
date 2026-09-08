@@ -12,11 +12,10 @@ export default function DashboardLayout({
 }) {
   const router = useRouter();
 
-  const [checking, setChecking] =
-    useState(true);
+  const [checking, setChecking] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem(
+    const token = sessionStorage.getItem(
       "management_access_token",
     );
 
@@ -27,14 +26,12 @@ export default function DashboardLayout({
 
     setChecking(false);
 
-    let inactivityTimer: ReturnType<
-      typeof setTimeout
-    >;
+    let inactivityTimer: ReturnType<typeof setTimeout>;
 
     const logout = () => {
-      sessionStorage.getItem(
-  "management_access_token",
-);
+      sessionStorage.removeItem(
+        "management_access_token",
+      );
 
       router.replace("/management");
     };
@@ -80,8 +77,8 @@ export default function DashboardLayout({
 
   function handleLogout() {
     sessionStorage.removeItem(
-  "management_access_token",
-);
+      "management_access_token",
+    );
 
     router.replace("/management");
   }
