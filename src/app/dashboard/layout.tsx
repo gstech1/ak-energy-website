@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-const INACTIVITY_LIMIT = 10 * 1000; // 10 minutes
+const INACTIVITY_LIMIT = 10 * 60 * 1000; // 10 minutes
 
 export default function DashboardLayout({
   children,
@@ -32,9 +32,9 @@ export default function DashboardLayout({
     >;
 
     const logout = () => {
-      localStorage.removeItem(
-        "management_access_token",
-      );
+      sessionStorage.getItem(
+  "management_access_token",
+);
 
       router.replace("/management");
     };
@@ -79,9 +79,9 @@ export default function DashboardLayout({
   }, [router]);
 
   function handleLogout() {
-    localStorage.removeItem(
-      "management_access_token",
-    );
+    sessionStorage.removeItem(
+  "management_access_token",
+);
 
     router.replace("/management");
   }

@@ -50,7 +50,7 @@ export default function ManagementLoginPage() {
   );
 }
 
-localStorage.setItem(
+sessionStorage.setItem(
   "management_access_token",
   data.accessToken,
 );
