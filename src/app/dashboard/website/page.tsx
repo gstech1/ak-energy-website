@@ -14,20 +14,34 @@ const sections = [
     icon: "⌂",
   },
   {
-  title: "Ads & Promotions",
-  description:
-    "Manage the two promotional images displayed above Our Products.",
-  href: "/dashboard/website/ads",
-  icon: "📢",
-},
+    title: "Ads & Promotions",
+    description:
+      "Manage the two promotional images displayed above Our Products.",
+    href: "/dashboard/website/ads",
+    icon: "📢",
+  },
 ];
+
+const swmsDashboardUrl =
+  process.env.NEXT_PUBLIC_SWMS_DASHBOARD_URL ||
+  (process.env.NODE_ENV === "production"
+    ? "https://suntreemyanmar.com/management"
+    : "http://localhost:3000/dashboard");
 
 export default function WebsiteManagementPage() {
   return (
     <main className="min-h-screen bg-slate-100 text-slate-900">
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-600">
+          {/* Back to SWMS Dashboard */}
+          <a
+            href={swmsDashboardUrl}
+            className="inline-flex items-center text-sm font-medium text-slate-500 transition hover:text-slate-900"
+          >
+            ← Back to SWMS Dashboard
+          </a>
+
+          <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-600">
             ArkarMinThukha Dashboard
           </p>
 

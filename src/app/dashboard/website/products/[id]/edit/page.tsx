@@ -2,9 +2,12 @@
 
 import { FormEvent, useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import { getManagementAuthHeaders } from "@/lib/website-cms-api";
 
-const API_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:5001";
+const API_URL = (
+  process.env.NEXT_PUBLIC_API_URL ||
+  "http://localhost:5001"
+).replace(/\/+$/, "");
 
 type Category = {
   id: string;
@@ -109,9 +112,9 @@ export default function EditCategoryPage() {
         `${API_URL}/website-cms/categories/${category.id}`,
         {
           method: "PATCH",
-          headers: {
+          headers: getManagementAuthHeaders({
             "Content-Type": "application/json",
-          },
+          }),
           body: JSON.stringify({
             title,
             slug,

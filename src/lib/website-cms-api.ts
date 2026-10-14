@@ -1,6 +1,22 @@
-const API_URL =
+const API_URL = (
   process.env.NEXT_PUBLIC_API_URL ||
-  "http://localhost:5001";
+  "http://localhost:5001"
+).replace(/\/+$/, "");
+
+export function getManagementAuthHeaders(
+  headers?: HeadersInit,
+): Headers {
+  const requestHeaders = new Headers(headers);
+
+  if (typeof window !== "undefined") {
+    const token = sessionStorage.getItem("management_access_token");
+    if (token) {
+      requestHeaders.set("Authorization", `Bearer ${token}`);
+    }
+  }
+
+  return requestHeaders;
+}
 
 export async function getWebsiteProductCategories() {
   const response = await fetch(
@@ -34,6 +50,7 @@ export async function uploadWebsiteImage(
     `${API_URL}/website-cms/uploads`,
     {
       method: "POST",
+      headers: getManagementAuthHeaders(),
       body: formData,
     },
   );
@@ -88,10 +105,10 @@ export async function createWebsiteProduct(
     `${API_URL}/website-cms/products`,
     {
       method: "POST",
-      headers: {
+      headers: getManagementAuthHeaders({
         "Content-Type":
           "application/json",
-      },
+      }),
       body: JSON.stringify(data),
     },
   );
@@ -129,9 +146,9 @@ export async function updateWebsiteProduct(
     `${API_URL}/website-cms/products/${id}`,
     {
       method: "PATCH",
-      headers: {
+      headers: getManagementAuthHeaders({
         "Content-Type": "application/json",
-      },
+      }),
       body: JSON.stringify(data),
     },
   );
@@ -184,10 +201,10 @@ export async function createWebsiteProject(
     `${API_URL}/website-cms/projects`,
     {
       method: "POST",
-      headers: {
+      headers: getManagementAuthHeaders({
         "Content-Type":
           "application/json",
-      },
+      }),
       body: JSON.stringify(data),
     },
   );
@@ -224,10 +241,10 @@ export async function updateWebsiteProject(
     `${API_URL}/website-cms/projects/${id}`,
     {
       method: "PATCH",
-      headers: {
+      headers: getManagementAuthHeaders({
         "Content-Type":
           "application/json",
-      },
+      }),
       body: JSON.stringify(data),
     },
   );
@@ -272,9 +289,9 @@ export async function createWebsiteAd(
     `${API_URL}/website-cms/ads`,
     {
       method: "POST",
-      headers: {
+      headers: getManagementAuthHeaders({
         "Content-Type": "application/json",
-      },
+      }),
       body: JSON.stringify(data),
     },
   );
@@ -303,9 +320,9 @@ export async function updateWebsiteAd(
     `${API_URL}/website-cms/ads/${id}`,
     {
       method: "PATCH",
-      headers: {
+      headers: getManagementAuthHeaders({
         "Content-Type": "application/json",
-      },
+      }),
       body: JSON.stringify(data),
     },
   );

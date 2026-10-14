@@ -6,9 +6,10 @@ import {
   uploadWebsiteImage,
 } from "@/lib/website-cms-api";
 
-const API_URL =
+const API_URL = (
   process.env.NEXT_PUBLIC_API_URL ||
-  "http://localhost:5001";
+  "http://localhost:5001"
+).replace(/\/+$/, "");
 
 function getImageUrl(image: string | null | undefined) {
   if (!image) return null;

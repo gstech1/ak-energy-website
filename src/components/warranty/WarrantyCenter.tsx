@@ -95,7 +95,7 @@ export default function WarrantyCenter() {
                 href="/warranty"
                 className="mt-10 flex items-center justify-center gap-2 rounded-2xl bg-green-600 px-8 py-4 text-lg font-semibold text-white transition hover:bg-green-700"
               >
-                Access Dealer Portal
+                Open Warranty Center
                 <ArrowRight size={20} />
               </Link>
 
