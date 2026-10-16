@@ -188,12 +188,12 @@ export default function PublicWarrantyPage() {
         {/* Logo */}
         <div className="flex justify-center px-6 pb-4 pt-6">
           <Image
-            src="/images/logo/suntree-logo.png"
-            alt="Suntree Myanmar"
-            width={160}
-            height={160}
+            src="/images/logo/suntree-myanmar-pair.png"
+            alt="Suntree Myanmar and Suntree Charger Myanmar"
+            width={330}
+            height={110}
             priority
-            className="h-auto w-40"
+            className="h-auto w-[290px] object-contain"
           />
         </div>
 

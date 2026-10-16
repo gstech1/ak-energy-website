@@ -35,14 +35,14 @@ export default function WarrantyHero() {
 
         <div className="grid items-start gap-10 py-8 lg:min-h-[calc(100vh-7rem)] lg:grid-cols-[minmax(0,1fr)_minmax(380px,440px)] lg:gap-14 lg:py-5">
           <div className="order-2 max-w-3xl lg:order-1 lg:pt-16">
-            <div className="mb-7 inline-flex rounded-2xl border border-white/30 bg-white px-7 py-4 shadow-2xl">
+            <div className="mb-7 inline-flex rounded-2xl border border-white/30 bg-white px-5 py-3 shadow-2xl">
               <Image
-                src="/images/logo/suntree-logo.png"
-                alt="Suntree Myanmar"
-                width={220}
-                height={70}
+                src="/images/logo/suntree-myanmar-pair.png"
+                alt="Suntree Myanmar and Suntree Charger Myanmar"
+                width={380}
+                height={127}
                 priority
-                className="h-auto w-[190px] object-contain"
+                className="h-auto w-[310px] object-contain"
               />
             </div>
 
