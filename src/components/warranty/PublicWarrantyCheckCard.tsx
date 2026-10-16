@@ -10,7 +10,7 @@ import WarrantyResultCard from "@/components/warranty/WarrantyResultCard";
 
 const warrantyAppUrl =
   process.env.NEXT_PUBLIC_WARRANTY_APP_URL?.replace(/\/$/, "") ||
-  "https://suntreemyanmar.com";
+  "https://dashboard.suntreemyanmar.com";
 
 type BarcodeDetection = { rawValue: string };
 type BarcodeDetectorInstance = {
