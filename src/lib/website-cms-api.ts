@@ -2,6 +2,10 @@ const API_URL = (
   process.env.NEXT_PUBLIC_API_URL ||
   "http://localhost:5001"
 ).replace(/\/+$/, "");
+const WEBSITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "https://suntreemyanmar.com"
+).replace(/\/+$/, "");
 
 export function getWebsiteCmsImageUrl(
   image: string | null | undefined,
@@ -9,27 +13,33 @@ export function getWebsiteCmsImageUrl(
   const value = image?.trim();
   if (!value) return "";
 
+  const normalized = value.replace(/\\/g, "/");
   const uploadPath = "website-cms/uploads/";
-  const uploadIndex = value.replace(/\\/g, "/").indexOf(uploadPath);
+  const uploadIndex = normalized.indexOf(uploadPath);
   if (uploadIndex >= 0) {
-    const path = `/${value.replace(/\\/g, "/").slice(uploadIndex)}`;
+    const path = `/${normalized.slice(uploadIndex)}`;
     return `${API_URL}${path}`;
   }
 
-  if (/^https?:\/\//i.test(value)) {
+  const productImageIndex = normalized.indexOf("images/products/");
+  if (productImageIndex >= 0) {
+    return `${WEBSITE_URL}/${normalized.slice(productImageIndex)}`;
+  }
+
+  if (/^https?:\/\//i.test(normalized)) {
     try {
-      const url = new URL(value);
+      const url = new URL(normalized);
       const apiHost = new URL(API_URL).hostname;
       if (url.protocol === "http:" && url.hostname === apiHost) {
         url.protocol = "https:";
       }
       return url.toString();
     } catch {
-      return value;
+      return normalized;
     }
   }
 
-  return value;
+  return normalized;
 }
 
 export function getManagementAuthHeaders(
