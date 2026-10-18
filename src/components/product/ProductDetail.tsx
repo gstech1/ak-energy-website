@@ -1,32 +1,13 @@
 "use client";
 
 import { forwardRef } from "react";
+import { getWebsiteCmsImageUrl } from "@/lib/website-cms-api";
 
 interface ProductDetailProps {
   product: {
     title: string;
     images: string[];
   };
-}
-
-const API_URL = (
-  process.env.NEXT_PUBLIC_API_URL ||
-  "http://localhost:5001"
-).replace(/\/+$/, "");
-
-function getImageUrl(image: string) {
-  if (
-    image.startsWith("http://") ||
-    image.startsWith("https://")
-  ) {
-    return image;
-  }
-
-  if (image.startsWith("/website-cms/uploads/")) {
-    return `${API_URL}${image}`;
-  }
-
-  return image;
 }
 
 const ProductDetail = forwardRef<HTMLDivElement, ProductDetailProps>(
@@ -41,7 +22,7 @@ const ProductDetail = forwardRef<HTMLDivElement, ProductDetailProps>(
               className="relative mb-6 w-full sm:mb-12 sm:h-[650px]"
             >
               <img
-                src={getImageUrl(image)}
+                src={getWebsiteCmsImageUrl(image)}
                 alt={`${product.title} ${index + 1}`}
                 className="block h-auto w-full object-contain sm:absolute sm:inset-0 sm:h-full"
               />

@@ -1,5 +1,7 @@
 "use client";
 
+import { getWebsiteCmsImageUrl } from "@/lib/website-cms-api";
+
 interface Product {
   id: string;
   title: string;
@@ -10,26 +12,6 @@ interface ProductCardsProps {
   products: Product[];
   selected: string;
   onSelect: (id: string) => void;
-}
-
-const API_URL = (
-  process.env.NEXT_PUBLIC_API_URL ||
-  "http://localhost:5001"
-).replace(/\/+$/, "");
-
-function getImageUrl(image: string) {
-  if (
-    image.startsWith("http://") ||
-    image.startsWith("https://")
-  ) {
-    return image;
-  }
-
-  if (image.startsWith("/website-cms/uploads/")) {
-    return `${API_URL}${image}`;
-  }
-
-  return image;
 }
 
 export default function ProductCards({
@@ -53,7 +35,7 @@ export default function ProductCards({
             >
               <div className="relative h-64 w-full bg-white">
                 <img
-                  src={getImageUrl(product.image)}
+                  src={getWebsiteCmsImageUrl(product.image)}
                   alt={product.title}
                   className="absolute inset-0 h-full w-full object-contain p-6"
                 />

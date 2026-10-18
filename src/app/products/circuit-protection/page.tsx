@@ -8,31 +8,10 @@ import ProductCards from "@/components/product/ProductCards";
 import ProductDetail from "@/components/product/ProductDetail";
 import ProductHero from "@/components/product/ProductHero";
 import { productMenu } from "@/data/product/product-menu";
-import { getWebsiteProductCategories } from "@/lib/website-cms-api";
-
-const API_URL = (
-  process.env.NEXT_PUBLIC_API_URL ||
-  "http://localhost:5001"
-).replace(/\/+$/, "");
-
-function getImageUrl(
-  image: string | null | undefined,
-) {
-  if (!image) return "";
-
-  if (
-    image.startsWith("http://") ||
-    image.startsWith("https://")
-  ) {
-    return image;
-  }
-
-  if (image.startsWith("/website-cms/uploads/")) {
-    return `${API_URL}${image}`;
-  }
-
-  return image;
-}
+import {
+  getWebsiteCmsImageUrl,
+  getWebsiteProductCategories,
+} from "@/lib/website-cms-api";
 
 export default function CircuitProtectionPage() {
   const [categories, setCategories] = useState<any[]>([]);
@@ -57,6 +36,22 @@ export default function CircuitProtectionPage() {
     }
 
     loadCategories();
+  }, []);
+
+  useEffect(() => {
+    const slug = new URLSearchParams(window.location.search).get("category");
+    const categoryBySlug: Record<string, string> = {
+      "dc-circuit-breaker": "DC Circuit Breaker",
+      "ac-circuit-breaker": "AC Circuit Breaker",
+      "dc-spd": "DC SPD",
+      "dc-isolator": "DC Isolator",
+      ats: "ATS",
+      "ac-voltage-protector": "AC Voltage Protector",
+    };
+
+    if (slug && categoryBySlug[slug]) {
+      setSelectedCategory(categoryBySlug[slug]);
+    }
   }, []);
 
   const category = useMemo(() => {
@@ -88,7 +83,7 @@ export default function CircuitProtectionPage() {
       .map((product: any) => ({
         id: product.id,
         title: product.title,
-        image: getImageUrl(
+        image: getWebsiteCmsImageUrl(
           product.mainImage,
         ),
         images: (product.images || [])
@@ -98,7 +93,7 @@ export default function CircuitProtectionPage() {
               b.sortOrder,
           )
           .map((image: any) =>
-            getImageUrl(
+            getWebsiteCmsImageUrl(
               image.imageUrl,
             ),
           ),
