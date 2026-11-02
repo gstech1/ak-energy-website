@@ -8,8 +8,8 @@ export default function DomainFavicon() {
       .toLowerCase()
       .replace(/^www\./, "");
     const iconPath = hostname === "suntreemyanmar.com"
-      ? "/images/logo/suntree-logo.png"
-      : "/images/logo/ak-logo2.png";
+      ? "/images/logo/suntree-favicon.png"
+      : "/images/logo/ak-favicon.png";
 
     const iconLinks = document.querySelectorAll<HTMLLinkElement>(
       'link[rel~="icon"]',
