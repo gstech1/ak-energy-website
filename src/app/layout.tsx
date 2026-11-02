@@ -3,6 +3,11 @@ import "./globals.css";
 import DomainFavicon from "@/components/DomainFavicon";
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/images/logo/ak-favicon.png",
+    shortcut: "/images/logo/ak-favicon.png",
+    apple: "/images/logo/ak-favicon.png",
+  },
   title: {
    default: "Arkar Min Thu Kha Electro Trading Co., Ltd.",
     template: "%s | Arkar Min Thu Kha"
