@@ -9,7 +9,7 @@ export default function DomainFavicon() {
       .replace(/^www\./, "");
     const iconPath = hostname === "suntreemyanmar.com"
       ? "/images/logo/suntree-logo.png"
-      : "/images/logo/ak-logo.png";
+      : "/images/logo/ak-logo2.png";
 
     const iconLinks = document.querySelectorAll<HTMLLinkElement>(
       'link[rel~="icon"]',
