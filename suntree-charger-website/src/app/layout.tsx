@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   description:
     "Discover Suntree electric vehicle charging solutions for homes, workplaces, and destinations in Myanmar.",
   alternates: { canonical: "https://suntreechargermyanmar.com" },
+  icons: {
+    icon: "/images/logo/suntree-charger-myanmar.png",
+    shortcut: "/images/logo/suntree-charger-myanmar.png",
+    apple: "/images/logo/suntree-charger-myanmar.png",
+  },
   openGraph: {
     title: "Arkar Min Thuka | Suntree Charger Myanmar",
     description:
